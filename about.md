@@ -1,0 +1,23 @@
+---
+layout: page
+title: About me
+permalink: /about/
+---
+#### Eduction:
+
+* PhD physics,(2018), Université Grenoble Alpes, Grenoble, France
+* MSc physics,(2015), National Research Nuclear University "MEPhI", Moscow, Russia
+
+
+
+#### Scientific interests :
+
+- Condensed matter physics, many-body physics, excited state dynamics, electron-phonon interaction, theoretical spectroscopy, quantum information
+
+#### Skills and expertise:
+
+- First-principle methods : DFT, DFT+U, TDDFT, DFTPT, MD
+
+- Many-body Green’s functions techniques : GW, Cumulant, BSE
+
+- Machine Learning and Neural Networks

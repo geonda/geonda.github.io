@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-26T03:44:03+03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Quantum whatever</title><subtitle>Personal blog about physics and programming
+</subtitle><author><name>Andrey Geondzhian</name></author><entry><title type="html">Quantum Computing : Modeling Bell’s (CHSH) inequality with Qiskit</title><link href="http://localhost:4000/jekyll/update/2020/04/25/chsh-inq.html" rel="alternate" type="text/html" title="Quantum Computing :  Modeling Bell's (CHSH) inequality with Qiskit" /><published>2020-04-25T06:11:00+03:00</published><updated>2020-04-25T06:11:00+03:00</updated><id>http://localhost:4000/jekyll/update/2020/04/25/chsh-inq</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/04/25/chsh-inq.html">&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/x-mathjax-config&quot;&gt;
+        MathJax.Hub.Config({
+          TeX: { equationNumbers: { autoNumber: &quot;AMS&quot; } }
+        });
+        &lt;/script&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/geonda/quantum-computing&quot;&gt;source on github&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/correlation.png&quot; alt=&quot;CHSH correlation function (S) vs relative angle between detectors ($\theta$).&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;CHSH correlation function vs relative angle between detectors (&lt;img src=&quot;https://render.githubusercontent.com/render/math?math=%5Ctheta&quot; alt=&quot;\theta&quot; /&gt;).&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;formulation&quot;&gt;Formulation&lt;/h3&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;From the classical point of view, the following inequality holds for any local hidden variable theory
+\begin{equation}
+ |S|&amp;lt;2 \ .
+\end{equation}
+Here
+\begin{equation}
+S=E(\textbf{AB})-E(\textbf{AB’})+E(\textbf{A’B’})+E(\textbf{A’B}) \ ,
+\end{equation}
+and&lt;/p&gt;
+
+&lt;p&gt;\(E(\textbf{AB})\) - is a correlation function obtained from two detectors oriented along arbitrary vectors \(\textbf{A}\) and \(\textbf{B}\).&lt;/p&gt;
+
+&lt;p&gt;However, within the framework of quantum mechanics (QM), things are different. There are specific orientations for which &lt;img src=&quot;https://render.githubusercontent.com/render/math?math=S&quot; alt=&quot;S&quot; /&gt; is greater than two.&lt;/p&gt;
+
+&lt;p&gt;Thus ineq. 1 appears to be an important and convenient test in favor of one or another theory.  So far, the experiment (despite some challenges) confirms the prediction of the quantum mechanic and, consequently, the non-locality of nature.&lt;/p&gt;
+
+&lt;h3 id=&quot;detectors&quot;&gt;Detectors&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;We can arbitrary constrain angles between detectors as \(\angle(\textbf{A, B})=\angle(\textbf{B, A’})=\angle(\textbf{A’,B’ })=\theta\). Then \(S\) becomes only a function of \(\theta \)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/bloch_sphere.png&quot; alt=&quot;Positions of detectors (A, A', B, B'). Bloch's spheres were projected onto xz plane.&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Projection of Bloch’s sphere onto xz plane and positions of detectors (A, A’, B, B’) for &lt;img src=&quot;https://render.githubusercontent.com/render/math?math=%5Ctheta%3D0%2C%20%5Cpi%2F4%2C%20%5Cpi%2F2&quot; alt=&quot;\theta=0, \pi/4, \pi/2&quot; /&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;qm-analytical-solution-for-spin-12-system&quot;&gt;QM analytical solution for spin 1/2 system&lt;/h3&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;\begin{equation}
+E(\textbf{AB}) = &amp;lt; \psi|\sigma(\textbf{A}) \sigma(\textbf{B})|\psi &amp;gt; =cos(\theta) \ ,
+\end{equation}&lt;/p&gt;
+
+&lt;p&gt;here \( | \psi &amp;gt;  \) is an entangled state of two qubits (Bell state):
+\begin{equation}
+\left |\psi &amp;gt; \right .= \frac{[ \ |00&amp;gt; + |11&amp;gt; ]}{\sqrt{2}} \ .
+\end{equation}&lt;/p&gt;
+
+&lt;h3 id=&quot;modeling-with-qiskit&quot;&gt;Modeling with Qiskit&lt;/h3&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;\begin{equation}
+E(\textbf{AB}) = \frac{N_{11}(\textbf{AB})+N_{00}(\textbf{AB})-N_{01}(\textbf{AB})-N_{10}(\textbf{AB})}{N_{11}(\textbf{AB})+N_{00}(\textbf{AB})+N_{01}(\textbf{AB})+N_{10}(\textbf{AB})} ,
+\end{equation}&lt;/p&gt;
+
+&lt;p&gt;and&lt;/p&gt;
+
+&lt;p&gt;\(N_{ij}(\textbf{AB}) \) is a number of counts registered in a given state \(|i,j&amp;gt;\), where \(i,j=\{0,1\}\).&lt;/p&gt;
+
+&lt;h3 id=&quot;qm-errors&quot;&gt;QM errors&lt;/h3&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;While quantum simulator gives perfect agreement with the analytical solution, quantum calculations on real devices accompanied by certain noise/errors.  For example, measurement of the  Bell state  along the &lt;em&gt;z&lt;/em&gt;-axis, should not in principle, contains any contribution with mixed spin. Still, QC produces non-zero probability to obtain  \(|01&amp;gt;\) and \(|10&amp;gt;\) states (check &lt;em&gt;/quantum_errors/&lt;/em&gt;).&lt;/p&gt;
+
+&lt;h3 id=&quot;manual&quot;&gt;Manual&lt;/h3&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;Required packages can be installed using &lt;em&gt;pip&lt;/em&gt; and are listed in &lt;em&gt;requirements.txt&lt;/em&gt; file.
+To get correlation &lt;img src=&quot;https://render.githubusercontent.com/render/math?math=S(%5Ctheta)&quot; alt=&quot;S(\theta)&quot; /&gt; use&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$ python run.py&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;There are two options for QM calculations using Aer qiskit simulator (&lt;code class=&quot;highlighter-rouge&quot;&gt;run_type='sim'&lt;/code&gt;) and real quantum computer (&lt;code class=&quot;highlighter-rouge&quot;&gt;run_type='ibmq'&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;To use ibm quantum computer one has to register &lt;a href=&quot;https://quantum-computing.ibm.com&quot;&gt;here&lt;/a&gt; and specify token and name of the machine in &lt;em&gt;ibm_setting.json&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;usefull-links&quot;&gt;Usefull links&lt;/h3&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;https://qiskit.org/textbook/ch-ex/hello-qiskit.html#Bell-test-for-classical-variables&lt;/p&gt;
+
+&lt;p&gt;https://pythonprogramming.net/quantum-computer-programming-tutorial/&lt;/p&gt;
+
+&lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
+&lt;hr /&gt;</content><author><name>Andrey Geondzhian</name></author><summary type="html"></summary></entry></feed>
