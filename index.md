@@ -8,4 +8,6 @@
 layout: home
 ---
 
+hi 
+
 {% include graph.html  %}
