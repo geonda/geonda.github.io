@@ -8,6 +8,3 @@
 layout: home
 ---
 
-hi 
-
-{% include grpah.html  %}
