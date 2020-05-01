@@ -9,4 +9,4 @@ layout: home
 ---
 
 
-[Google](https://google.com/) <span class="info">new</span>
+ {% include image.html file="jekyll.png" url="http://jekyllrb.com" alt="Jekyll" caption="This is a sample caption" %"}
