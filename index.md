@@ -10,4 +10,4 @@ layout: home
 
 hi 
 
-{% include graph.html  %}
+{% include grpah.html  %}
