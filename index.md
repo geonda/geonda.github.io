@@ -7,3 +7,6 @@
 #
 layout: home
 ---
+
+
+[Google](https://google.com/) <span class="info">new</span>
