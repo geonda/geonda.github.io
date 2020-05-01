@@ -1,0 +1,108 @@
+I"0<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
+
+<script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          TeX: { equationNumbers: { autoNumber: "AMS" } }
+        });
+        </script>
+
+<p><a href="https://github.com/geonda/quantum-computing">source on github</a></p>
+
+<p><img src="/images/correlation.png" alt="CHSH correlation function (S) vs relative angle between detectors ($\theta$)." /></p>
+
+<p><em>CHSH correlation function vs relative angle between detectors (<img src="https://render.githubusercontent.com/render/math?math=%5Ctheta" alt="\theta" />).</em></p>
+
+<h3 id="formulation">Formulation</h3>
+<hr />
+
+<p>From the classical point of view, the following inequality holds for any local hidden variable theory
+\begin{equation}
+ |S|&lt;2 \ .
+\end{equation}
+Here
+\begin{equation}
+S=E(\textbf{AB})-E(\textbf{AB’})+E(\textbf{A’B’})+E(\textbf{A’B}) \ ,
+\end{equation}
+where \(E(\textbf{AB})\) - is a correlation function (for example, spin-spin correlation function) between two points on different sides of the source and arbitary unit vectors (\(\textbf{A}\), \(\textbf{B}\)) specify orientations of the linear detectors.</p>
+
+<p>However, within the framework of the quantum mechanics (QM), things are different. QM states that there are specific configurations of the experiment for which <img src="https://render.githubusercontent.com/render/math?math=S" alt="S" /> becomes greater than two.</p>
+
+<p>Thus ineq. 1 appears to be an important and convenient test in favor of one or another theory.  So far, the experiment (despite some challenges) confirms the prediction of the quantum mechanic and, consequently, the non-locality of our nature.</p>
+
+<h3 id="detectors">Detectors</h3>
+<hr />
+
+<p>Whithout losing generality we can choose to constrain angles between detectors as \(\angle(\textbf{A, B})=\angle(\textbf{B, A’})=\angle(\textbf{A’,B’ })=\theta\).</p>
+
+<p>Then \(S\) becomes only a function of \(\theta \)</p>
+
+<p><img src="/images/bloch_sphere.png" alt="Positions of detectors (A, A', B, B'). Bloch's spheres were projected onto xz plane." /></p>
+
+<p><em>Projection of Bloch’s sphere onto xz plane and positions of detectors (A, A’, B, B’) for <img src="https://render.githubusercontent.com/render/math?math=%5Ctheta%3D0%2C%20%5Cpi%2F4%2C%20%5Cpi%2F2" alt="\theta=0, \pi/4, \pi/2" />.</em></p>
+
+<h3 id="qm-analytical-solution-for-spin-12-system">QM analytical solution for spin 1/2 system</h3>
+<hr />
+
+<p>\begin{equation}
+E(\textbf{AB}) = &lt; \psi|\sigma(\textbf{A}) \sigma(\textbf{B})|\psi &gt; =cos(\theta) \ ,
+\end{equation}</p>
+
+<p>here \( | \psi &gt;  \) is an entangled state of two qubits (Bell state):
+\begin{equation}
+\left |\psi &gt; \right .= \frac{[ \ |00&gt; + |11&gt; ]}{\sqrt{2}} \ .
+\end{equation}</p>
+
+<h3 id="modeling-with-qiskit">Modeling with Qiskit</h3>
+<hr />
+
+<p>\begin{equation}
+E(\textbf{AB}) = \frac{N_{11}(\textbf{AB})+N_{00}(\textbf{AB})-N_{01}(\textbf{AB})-N_{10}(\textbf{AB})}{N_{11}(\textbf{AB})+N_{00}(\textbf{AB})+N_{01}(\textbf{AB})+N_{10}(\textbf{AB})} ,
+\end{equation}</p>
+
+<p>and</p>
+
+<p>\(N_{ij}(\textbf{AB}) \) is a number of counts registered in a given state \(|i,j&gt;\), where \(i,j=\{0,1\}\).</p>
+
+<h3 id="qm-errors">QM errors</h3>
+<hr />
+
+<p>While quantum simulator gives perfect agreement with the analytical solution, quantum calculations on real devices accompanied by certain noise/errors.  For example, measurement of the  Bell state  along the <em>z</em>-axis, should not in principle, contains any contribution with the mixed spin. Still, QC produces non-zero probability to obtain  \(|01&gt;\) and \(|10&gt;\) states (check  <a href="https://github.com/geonda/quantum-computing/tree/master/quantum_errors/"><em>/quantum_errors/</em></a>).</p>
+
+<h3 id="manual">Manual</h3>
+<hr />
+
+<p><a href="https://github.com/geonda/quantum-computing">source on github</a></p>
+
+<p>Required packages can be installed using <em>pip</em> and are listed in <em>requirements.txt</em> file.</p>
+
+<p>To get correlation <img src="https://render.githubusercontent.com/render/math?math=S(%5Ctheta)" alt="S(\theta)" /> use</p>
+
+<p><code class="highlighter-rouge">$ python run.py</code></p>
+
+<p>There are two options for QM calculations :</p>
+<ul>
+  <li>using Aer qiskit simulator (<code class="highlighter-rouge">run_type='sim'</code>);</li>
+  <li>using real quantum computer (<code class="highlighter-rouge">run_type='ibmq'</code>).</li>
+</ul>
+
+<p>To use ibm quantum computer one has to register <a href="https://quantum-computing.ibm.com">here</a> and specify token and name of the machine in <em>ibm_setting.json</em>.</p>
+
+<h3 id="usefull-links">Usefull links</h3>
+<hr />
+
+<ul>
+  <li>
+    <p><a href="https://qiskit.org/textbook/ch-ex/hello-qiskit.html#Bell-test-for-classical-variables">Qiskit docs</a></p>
+  </li>
+  <li>
+    <p><a href="https://pythonprogramming.net/quantum-computer-programming-tutorial/">QC programming tutorial</a></p>
+  </li>
+</ul>
+
+<h3 id="acknowledgements">Acknowledgements</h3>
+<hr />
+<p>Thanks to Alexandra Malyavina</p>
+
+<h3 id="references">References</h3>
+<hr />
+:ET
