@@ -1,0 +1,116 @@
+I"�<p>An obvious thing to do when you just launched blog on GitHub pages is to write about it.
+To succeed in this journey, one only needs to have a Github account, and <a href="https://jekyllrb.com">Jekyll</a> will do the rest.</p>
+
+<p><em>Not all steps requires jekyll to be installed but it is genuinely useful and convenient tool to managing your website so i’d recommend to have it.</em></p>
+
+<h3 id="step-1--decide-what-do-you-want-from-a-visual-and-practical-point-of-view">Step 1 | Decide what do you want from a visual and practical point of view.</h3>
+
+<p>Check out Jekyll themes :</p>
+
+<ul>
+  <li>
+    <p><a href="http://jekyllthemes.org">jekyllthemes.org</a></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/planetjekyll/awesome-jekyll-themes">collection on GitHub</a></p>
+  </li>
+  <li>
+    <p><a href="https://jekyllrb.com/docs/themes/">jekyll official website</a></p>
+  </li>
+</ul>
+
+<p>or start with a <a href="https://github.com/jekyll/minima">basic</a> one. Just keep in mind that it is less likely you will find a perfect theme but they are easy to adjust for your unique needs. So choose something to stat with.</p>
+
+<h3 id="step-2--fork-it-">Step 2 | Fork it !</h3>
+<hr />
+
+<p>Well, you can either fork existent repository</p>
+
+<p><img src="/images/fork.png" alt="x" /></p>
+
+<p>and then rename it as : your_website.github.io</p>
+
+<p><img src="/images/cname.png" alt="x" /></p>
+
+<p>or you can start by creating new repository and later fill it with the theme’s content.</p>
+
+<h3 id="step-3--clone-it-">Step 3 | Clone it !</h3>
+<hr />
+
+<p>Create locally new working directory (eg ‘~/GitHub/’) and clone there your remote repository</p>
+
+<p><code class="highlighter-rouge">$git clone  https://github.com/your-username/your-repository.git</code>.</p>
+
+<p>If you did not use fork method initially, it is time to download and save all files from the theme’s template to your working directory</p>
+
+<p><img src="/images/gitclone.png" alt="x" /></p>
+
+<p>or generate them with <code class="highlighter-rouge">jekyll new your_website</code>. And push those files back to remote server</p>
+
+<p><code class="highlighter-rouge">$git push origin master</code>.</p>
+
+<h3 id="step-4--share-master-branch">Step 4 | Share master branch</h3>
+<hr />
+
+<p>Change the settings to show content of the master branch.</p>
+
+<p><img src="/images/chage_gh.png" alt="x" /></p>
+
+<p>et voilà  and that is it.</p>
+
+<p>At this point you should be able to see your webpage https://your_website.github.io filled with the default content.</p>
+
+<h3 id="step-5--check-it-out-locally">Step 5 | Check it out locally</h3>
+<hr />
+
+<p>Run <a href="https://jekyllrb.com">Jekyll</a> it in the same directory as “<em>_config.yml</em>” file of your new website</p>
+
+<p><code class="highlighter-rouge">$jekyll serve</code></p>
+
+<p>Now local version of your webpage is accessible in the browser by ‘https://127.0.0.1:4000’</p>
+
+<h3 id="step-5--filling-content">Step 5 | Filling content</h3>
+<hr />
+
+<p>You can start by modifying   <code class="highlighter-rouge">_config.yml</code></p>
+
+<p><img src="/images/config1.png" alt="x" /></p>
+
+<p>After you specified general information about your webpage all content is paced in <code class="highlighter-rouge">index.md</code> and <code class="highlighter-rouge">_post/YYYY-MM-DD-your-post-name.md</code> files. Note that you have to restart jekyll in order to correctly reflect changes in  <code class="highlighter-rouge">_config.yml</code> but other files are updating on fly.</p>
+
+<p>Since Jekyll uses markdown format you might found useful this syntax <a href="https://guides.github.com/features/mastering-markdown/">guide</a></p>
+
+<h4 id="images">Images</h4>
+<ul>
+  <li>To link images in the post you can use hyper links pointing there location inside working directory.</li>
+</ul>
+
+<p>Eg : <code class="highlighter-rouge">/images/your_image.png</code></p>
+
+<ul>
+  <li>To use any HTMl content you have to place it inside <code class="highlighter-rouge">/_includes/</code> folder and call it from markdown as</li>
+</ul>
+
+<p><code class="highlighter-rouge">{</code>%<code class="highlighter-rouge"> include your.html </code>%<code class="highlighter-rouge">}</code></p>
+
+<ul>
+  <li>While markdown originally does not support <code class="highlighter-rouge">LATEX</code> syntax you can use MathJax.js to fix it. Create <code class="highlighter-rouge">math.html</code> in  <code class="highlighter-rouge">/_includes/</code> with the following content</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"&gt;&lt;/script&gt;
+&lt;script type="text/x-mathjax-config"&gt;
+        MathJax.Hub.Config({
+          TeX: { equationNumbers: { autoNumber: "AMS" } }
+        });
+        &lt;/script&gt;
+</code></pre></div></div>
+
+<p>and use <code class="highlighter-rouge">{</code>%<code class="highlighter-rouge"> include math.html </code>%<code class="highlighter-rouge">}</code>  in the beginning of your post.</p>
+
+<h3 id="step-6--modification-of-the-theme">Step 6 | Modification of the theme</h3>
+<hr />
+
+<h3 id="step-7--indexing">Step 7 | Indexing</h3>
+<hr />
+:ET
