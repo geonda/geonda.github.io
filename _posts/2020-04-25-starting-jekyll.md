@@ -5,8 +5,11 @@ date:   2020-04-25 06:11:00 +0300
 categories: jekyll update
 ---
 
-An obvious thing to do when you just launched a blog on GitHub pages is to write about it. To succeed in this journey, one only needs to have a Github account, and [Jekyll](https://jekyllrb.com) will do the rest.
-*Not all steps require Jekyll to be actually installed, but it is a genuinely useful and convenient tool for managing your website, so I’d recommend having it.*
+An obvious thing to do when you just launched a blog on GitHub pages is to write about it.
+
+To succeed through this journey, one only needs to have a Github account, some understanding of Git and [Jekyll](https://jekyllrb.com) will do the rest.
+
+*In principle it is possible to work on remote repository without even installing Jekyll but since it is a genuinely useful and convenient tool for managing your website, so I’d recommend having it.*
 
 ### Step 1 | Decide what do you want from a visual and practical point of view.
 
@@ -55,7 +58,7 @@ Change the settings to show content of the master branch.
 
 ![x](/images/chage_gh.png)
 
-et voilà  and that is it.
+et voilà, that is it.
 
 At this point you should be able to see your webpage https://your_website.github.io filled with the default content.
 
@@ -75,7 +78,7 @@ You can start by modifying   `_config.yml`
 
 ![x](/images/config1.png)
 
-After you specified general information about your webpage all content is paced in `index.md` and `_post/YYYY-MM-DD-your-post-name.md` files. Note that you have to restart jekyll in order to correctly reflect changes in  `_config.yml` but other files are updating on fly.
+After you specified general information about your webpage all content is paced in `index.md` and `_post/YYYY-MM-DD-your-post-name.md` files. Note that you have to restart `jekyll` in order to correctly reflect changes in  `_config.yml` but other files are updating on fly.
 
 Since Jekyll uses markdown format you might found useful this syntax [guide](https://guides.github.com/features/mastering-markdown/)
 
@@ -128,12 +131,12 @@ and  `gem 'jekyll-your_plagin'` to `Gemfile`.
 
 
 ### Step 7 | Indexing and statistics
-Jekyll -seo-tag plagin generates automaticaly generates set of tag based on the config file information which then can be used by the search engines.
+Jekyll `-seo-tag` plagin  automatically generates set of tags based on the config file information which then can be used by the search engines.
 
-It might, however, take sometime before website will be indexed and appears in the search results. To check if the you website is in data base try searching `site:your_website.github.io`. If result is negative you can directly ask google (for example) crawl you website by submitting you url
+It might, however, take sometime before website will be indexed and appears in the search results. To check if the you website is in data base try searching `site:your_website.github.io`. If result is negative you can directly ask google (for example) crawl you website by submitting your url
 in [google search console](https://search.google.com/search-console/about).
 
-If you want Google analytics on your site, first create an account and specify submit your resource. Then you should put suggested html code  into `_includes` folder as `google-analytics.html` :
+If you want Google analytics on your site, first create an account and  submit your resource. Then you should put suggested html code into `_includes` folder and save it as `google-analytics.html` :
 
 ```
 <script async src="https://www.googletagmanager.com/gtag/js?id=UX-XXXXXXXX"></script>
@@ -146,7 +149,7 @@ If you want Google analytics on your site, first create an account and specify s
 </script>
 ```
 
-Here 'UX-XXXXXXXX' is a personal token. And simply add `{`%`- include google-analytics.html -`%`}` to inside `<head></head>` tags in your `head.html` file.
+Here 'UX-XXXXXXXX' is a personal token. Finally add `{`%`- include google-analytics.html -`%`}` in between `<head></head>` tags in your `head.html` file.
 
 ### Step 8 | ...
 ---

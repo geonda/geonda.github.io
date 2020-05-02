@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-05-02T03:39:45+03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Quantum whatever</title><subtitle>Personal blog about physics and programming
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-05-02T16:43:02+03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Quantum whatever</title><subtitle>Personal blog about physics and programming
 </subtitle><author><name>Andrey Geondzhian</name></author><entry><title type="html">Quantum Computing : Modeling Bell’s (CHSH) inequality with Qiskit</title><link href="http://localhost:4000/jekyll/update/2020/04/25/chsh-inq.html" rel="alternate" type="text/html" title="Quantum Computing :  Modeling Bell's (CHSH) inequality with Qiskit" /><published>2020-04-25T06:11:00+03:00</published><updated>2020-04-25T06:11:00+03:00</updated><id>http://localhost:4000/jekyll/update/2020/04/25/chsh-inq</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/04/25/chsh-inq.html">&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML&quot;&gt;&lt;/script&gt;
 
 &lt;script type=&quot;text/x-mathjax-config&quot;&gt;
@@ -105,8 +105,11 @@ E(\textbf{AB}) = \frac{N_{11}(\textbf{AB})+N_{00}(\textbf{AB})-N_{01}(\textbf{AB
 &lt;p&gt;Thanks to Alexandra Malyavina&lt;/p&gt;
 
 &lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
-&lt;hr /&gt;</content><author><name>Andrey Geondzhian</name></author><summary type="html"></summary></entry><entry><title type="html">Launching a website with Jekyll in 8 steps</title><link href="http://localhost:4000/jekyll/update/2020/04/25/starting-jekyll.html" rel="alternate" type="text/html" title="Launching a website with Jekyll in 8 steps" /><published>2020-04-25T06:11:00+03:00</published><updated>2020-04-25T06:11:00+03:00</updated><id>http://localhost:4000/jekyll/update/2020/04/25/starting-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/04/25/starting-jekyll.html">&lt;p&gt;An obvious thing to do when you just launched a blog on GitHub pages is to write about it. To succeed in this journey, one only needs to have a Github account, and &lt;a href=&quot;https://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; will do the rest.
-&lt;em&gt;Not all steps require Jekyll to be actually installed, but it is a genuinely useful and convenient tool for managing your website, so I’d recommend having it.&lt;/em&gt;&lt;/p&gt;
+&lt;hr /&gt;</content><author><name>Andrey Geondzhian</name></author><summary type="html"></summary></entry><entry><title type="html">Launching a website with Jekyll in 8 steps</title><link href="http://localhost:4000/jekyll/update/2020/04/25/starting-jekyll.html" rel="alternate" type="text/html" title="Launching a website with Jekyll in 8 steps" /><published>2020-04-25T06:11:00+03:00</published><updated>2020-04-25T06:11:00+03:00</updated><id>http://localhost:4000/jekyll/update/2020/04/25/starting-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/04/25/starting-jekyll.html">&lt;p&gt;An obvious thing to do when you just launched a blog on GitHub pages is to write about it.&lt;/p&gt;
+
+&lt;p&gt;To succeed through this journey, one only needs to have a Github account, some understanding of Git and &lt;a href=&quot;https://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; will do the rest.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;In principle it is possible to work on remote repository without even installing Jekyll but since it is a genuinely useful and convenient tool for managing your website, so I’d recommend having it.&lt;/em&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;step-1--decide-what-do-you-want-from-a-visual-and-practical-point-of-view&quot;&gt;Step 1 | Decide what do you want from a visual and practical point of view.&lt;/h3&gt;
 
@@ -161,7 +164,7 @@ E(\textbf{AB}) = \frac{N_{11}(\textbf{AB})+N_{00}(\textbf{AB})-N_{01}(\textbf{AB
 
 &lt;p&gt;&lt;img src=&quot;/images/chage_gh.png&quot; alt=&quot;x&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;et voilà  and that is it.&lt;/p&gt;
+&lt;p&gt;et voilà, that is it.&lt;/p&gt;
 
 &lt;p&gt;At this point you should be able to see your webpage https://your_website.github.io filled with the default content.&lt;/p&gt;
 
@@ -181,7 +184,7 @@ E(\textbf{AB}) = \frac{N_{11}(\textbf{AB})+N_{00}(\textbf{AB})-N_{01}(\textbf{AB
 
 &lt;p&gt;&lt;img src=&quot;/images/config1.png&quot; alt=&quot;x&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;After you specified general information about your webpage all content is paced in &lt;code class=&quot;highlighter-rouge&quot;&gt;index.md&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;_post/YYYY-MM-DD-your-post-name.md&lt;/code&gt; files. Note that you have to restart jekyll in order to correctly reflect changes in  &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; but other files are updating on fly.&lt;/p&gt;
+&lt;p&gt;After you specified general information about your webpage all content is paced in &lt;code class=&quot;highlighter-rouge&quot;&gt;index.md&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;_post/YYYY-MM-DD-your-post-name.md&lt;/code&gt; files. Note that you have to restart &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll&lt;/code&gt; in order to correctly reflect changes in  &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; but other files are updating on fly.&lt;/p&gt;
 
 &lt;p&gt;Since Jekyll uses markdown format you might found useful this syntax &lt;a href=&quot;https://guides.github.com/features/mastering-markdown/&quot;&gt;guide&lt;/a&gt;&lt;/p&gt;
 
@@ -228,12 +231,12 @@ E(\textbf{AB}) = \frac{N_{11}(\textbf{AB})+N_{00}(\textbf{AB})-N_{01}(\textbf{AB
 &lt;p&gt;and  &lt;code class=&quot;highlighter-rouge&quot;&gt;gem 'jekyll-your_plagin'&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;step-7--indexing-and-statistics&quot;&gt;Step 7 | Indexing and statistics&lt;/h3&gt;
-&lt;p&gt;Jekyll -seo-tag plagin generates automaticaly generates set of tag based on the config file information which then can be used by the search engines.&lt;/p&gt;
+&lt;p&gt;Jekyll &lt;code class=&quot;highlighter-rouge&quot;&gt;-seo-tag&lt;/code&gt; plagin  automatically generates set of tags based on the config file information which then can be used by the search engines.&lt;/p&gt;
 
-&lt;p&gt;It might, however, take sometime before website will be indexed and appears in the search results. To check if the you website is in data base try searching &lt;code class=&quot;highlighter-rouge&quot;&gt;site:your_website.github.io&lt;/code&gt;. If result is negative you can directly ask google (for example) crawl you website by submitting you url
+&lt;p&gt;It might, however, take sometime before website will be indexed and appears in the search results. To check if the you website is in data base try searching &lt;code class=&quot;highlighter-rouge&quot;&gt;site:your_website.github.io&lt;/code&gt;. If result is negative you can directly ask google (for example) crawl you website by submitting your url
 in &lt;a href=&quot;https://search.google.com/search-console/about&quot;&gt;google search console&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;If you want Google analytics on your site, first create an account and specify submit your resource. Then you should put suggested html code  into &lt;code class=&quot;highlighter-rouge&quot;&gt;_includes&lt;/code&gt; folder as &lt;code class=&quot;highlighter-rouge&quot;&gt;google-analytics.html&lt;/code&gt; :&lt;/p&gt;
+&lt;p&gt;If you want Google analytics on your site, first create an account and  submit your resource. Then you should put suggested html code into &lt;code class=&quot;highlighter-rouge&quot;&gt;_includes&lt;/code&gt; folder and save it as &lt;code class=&quot;highlighter-rouge&quot;&gt;google-analytics.html&lt;/code&gt; :&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;script async src=&quot;https://www.googletagmanager.com/gtag/js?id=UX-XXXXXXXX&quot;&amp;gt;&amp;lt;/script&amp;gt;
 &amp;lt;script&amp;gt;
@@ -245,8 +248,8 @@ in &lt;a href=&quot;https://search.google.com/search-console/about&quot;&gt;goog
 &amp;lt;/script&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Here ‘UX-XXXXXXXX’ is a personal token. And simply add &lt;code class=&quot;highlighter-rouge&quot;&gt;{&lt;/code&gt;%&lt;code class=&quot;highlighter-rouge&quot;&gt;- include google-analytics.html -&lt;/code&gt;%&lt;code class=&quot;highlighter-rouge&quot;&gt;}&lt;/code&gt; to inside &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;&lt;/code&gt; tags in your &lt;code class=&quot;highlighter-rouge&quot;&gt;head.html&lt;/code&gt; file.&lt;/p&gt;
+&lt;p&gt;Here ‘UX-XXXXXXXX’ is a personal token. Finally add &lt;code class=&quot;highlighter-rouge&quot;&gt;{&lt;/code&gt;%&lt;code class=&quot;highlighter-rouge&quot;&gt;- include google-analytics.html -&lt;/code&gt;%&lt;code class=&quot;highlighter-rouge&quot;&gt;}&lt;/code&gt; in between &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;&lt;/code&gt; tags in your &lt;code class=&quot;highlighter-rouge&quot;&gt;head.html&lt;/code&gt; file.&lt;/p&gt;
 
 &lt;h3 id=&quot;step-8--&quot;&gt;Step 8 | …&lt;/h3&gt;
 &lt;hr /&gt;
-&lt;p&gt;Just push it back and enjoy !&lt;/p&gt;</content><author><name>Andrey Geondzhian</name></author><summary type="html">An obvious thing to do when you just launched a blog on GitHub pages is to write about it. To succeed in this journey, one only needs to have a Github account, and Jekyll will do the rest. Not all steps require Jekyll to be actually installed, but it is a genuinely useful and convenient tool for managing your website, so I’d recommend having it.</summary></entry></feed>
+&lt;p&gt;Just push it back and enjoy !&lt;/p&gt;</content><author><name>Andrey Geondzhian</name></author><summary type="html">An obvious thing to do when you just launched a blog on GitHub pages is to write about it.</summary></entry></feed>
