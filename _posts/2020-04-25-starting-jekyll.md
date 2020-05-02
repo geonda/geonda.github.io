@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Starting jekyll website in N steps"
+title:  "Launching a website with Jekyll in 8 steps"
 date:   2020-04-25 06:11:00 +0300
 categories: jekyll update
 ---
