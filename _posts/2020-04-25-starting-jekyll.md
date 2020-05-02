@@ -5,10 +5,8 @@ date:   2020-04-25 06:11:00 +0300
 categories: jekyll update
 ---
 
-An obvious thing to do when you just launched blog on GitHub pages is to write about it.
-To succeed in this journey, one only needs to have a Github account, and [Jekyll](https://jekyllrb.com) will do the rest.
-
-*Not all steps requires jekyll to be installed but it is genuinely useful and convenient tool to managing your website so i'd recommend to have it.*
+An obvious thing to do when you just launched a blog on GitHub pages is to write about it. To succeed in this journey, one only needs to have a Github account, and [Jekyll](https://jekyllrb.com) will do the rest.
+*Not all steps require Jekyll to be actually installed, but it is a genuinely useful and convenient tool for managing your website, so I’d recommend having it.*
 
 ### Step 1 | Decide what do you want from a visual and practical point of view.
 
