@@ -6,7 +6,8 @@ author:
   # baseurl: /geonda.github.io
 description: > # this means to ignore newlines until "show_excerpts:"
   Personal blog about physics and programming
-show_excerpts: false # set to true to show excerpts on the homepage
+show_excerpts: true
+excerpt_separator: <!--more--> # set to true to show excerpts on the homepage
 
 # Minima date format
 # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
