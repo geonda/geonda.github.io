@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Launching a website with Jekyll in 8 steps"
-date:   2020-04-25 06:11:00 +0300
+date:   2020-05-05 06:11:00 +0300
 categories: jekyll update
 ---
 
@@ -9,7 +9,7 @@ An obvious thing to do when you just launched a blog on GitHub pages is to write
 
 To succeed through this journey, one only needs to have a Github account, some understanding of Git and [Jekyll](https://jekyllrb.com) will do the rest.
 
-*In principle it is possible to work on remote repository without even installing Jekyll but since it is a genuinely useful and convenient tool for managing your website, so I’d recommend having it.*
+*In principle it is possible to work on remote repository without even installing Jekyll but since it is a genuinely useful and convenient tool for managing your website I’d recommend having it.*
 
 <!--more-->
 
