@@ -11,6 +11,8 @@ To succeed through this journey, one only needs to have a Github account, some u
 
 *In principle it is possible to work on remote repository without even installing Jekyll but since it is a genuinely useful and convenient tool for managing your website, so I’d recommend having it.*
 
+<!--more-->
+
 ### Step 1 | Decide what do you want from a visual and practical point of view.
 
 Check out Jekyll themes :
