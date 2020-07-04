@@ -3,7 +3,7 @@ layout: page
 title: About me
 permalink: /about/
 ---
-#### Eduction:
+#### Education:
 
 * PhD physics,(2018), Université Grenoble Alpes, Grenoble, France
 * MSc physics,(2015), National Research Nuclear University "MEPhI", Moscow, Russia
