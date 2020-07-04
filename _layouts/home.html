@@ -33,19 +33,14 @@ layout: default
         </h3>
         {%- if site.show_excerpts -%}
 
-          {% if page.content contains '<!--more-->' %}
-          <div>
-            {{ page.content | split:'<!--more-->' | first }}
+          {% if post.content contains "<!-- more -->" %}
+          {{ post.content | split:"<!-- more -->" | first % }}
+          <div style="text-align:right;">
+            <a href="{{ post.url }}" style="color:#000;"> Read More </a>
           </div>
-          <input type="checkbox" class="read-more-state" id="{{ page.url }}"/>
-          <div class="read-more">
-            {{ page.content | split:'<!--more-->' | last }}
-          </div>
-          <label for="{{ page.url }}" class="read-more-trigger"></label>
           {% else %}
-            {{ page.content }}
+            {{ post.content }}
           {% endif %}
-
 
 
 
