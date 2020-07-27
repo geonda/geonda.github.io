@@ -1,0 +1,26 @@
+I"­<p><img src="/images/iterm.png" alt="x" /></p>
+
+<!-- more -->
+
+<p>Recently apple decided to move from old-friend bash to zsch. Thatâ€™s a good one.
+Plenty of plugins, autocomplete on another level and custom themes for visual joy and productivity.</p>
+
+<p>Just check it out:</p>
+
+<ul>
+  <li>
+    <p><a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH">install zsh</a> and <a href="https://www.iterm2.com">iterm</a></p>
+  </li>
+  <li>
+    <p>install oh-my-zsh (with curl):</p>
+  </li>
+</ul>
+
+<p><code class="highlighter-rouge"> sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" </code></p>
+
+<p>All setting now in <code class="highlighter-rouge">~/.zshrc</code> and the framework itself in <code class="highlighter-rouge">~/.oh-my-zsh</code></p>
+
+<ul>
+  <li>set up a theme for iterm <a href="https://github.com/romkatv/powerlevel10k">(powerlevel10k is supercool)</a></li>
+</ul>
+:ET
