@@ -2,7 +2,7 @@ title: Quantum whatever
 author:
   name: Andrey Geondzhian
   email:
-  url: geonda.github.io
+  url: https://geonda.github.io
   # baseurl: /geonda.github.io
 description: > # this means to ignore newlines until "show_excerpts:"
   Personal blog about physics and programming
