@@ -4,7 +4,11 @@ title: about me
 permalink: /about/
 ---
 
-<object data="pdf/CV_Geondzhian.pdf" width="1000" height="1000" type='application/pdf'/>
+
+
+#### Andrey Geondzhian
+
+Theoretical physicist
 
 #### Education:
 
@@ -24,3 +28,6 @@ permalink: /about/
 - Many-body Green’s functions techniques : GW, Cumulant, BSE
 
 - Machine Learning and Neural Networks
+
+-----
+Download [CV](pdf/CV_Geondzhian.pdf)
