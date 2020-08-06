@@ -30,4 +30,4 @@ Theoretical physicist
 - Machine Learning and Neural Networks
 
 -----
-Download [CV](pdf/CV_Geondzhian.pdf)
+Download [CV](pdf/CV_Geondzhian_.pdf)
