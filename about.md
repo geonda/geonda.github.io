@@ -4,7 +4,7 @@ title: about me
 permalink: /about/
 ---
 
-<object data="./pdf/CV_Geondzhian.pdf" width="1000" height="1000" type='application/pdf'/>
+<object data="pdf/CV_Geondzhian.pdf" width="1000" height="1000" type='application/pdf'/>
 
 #### Education:
 
