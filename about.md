@@ -4,6 +4,8 @@ title: about me
 permalink: /about/
 ---
 
+<object data="./pdf/CV_Geondzhian.pdf" width="1000" height="1000" type='application/pdf'/>
+
 #### Education:
 
 * PhD physics(2019), Université Grenoble Alpes, Grenoble, France
